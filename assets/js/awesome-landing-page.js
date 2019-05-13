@@ -15,6 +15,10 @@
 
         var big_image;
         $().ready(function() {
+
+            new WOW().init();
+
+            
             $('.selector').click(function() {
                 SelectColor(this);
             });

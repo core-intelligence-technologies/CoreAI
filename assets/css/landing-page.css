@@ -1208,7 +1208,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     display: block;
    }
 
-   .landing-page .section-demo  .row:nth-child(even) .demo-image img{
+   .landing-page .section-demo  .row:nth-child(odd) .demo-image img{
     float: right;
    }
    .landing-page .section-demo .demo-image img{
