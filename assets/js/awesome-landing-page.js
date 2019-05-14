@@ -39,6 +39,14 @@ video.play();
 
         $(window).on('scroll', function() {
             responsive = $(window).width();
+            pos = $(window).scrollTop();
+            if(pos>630){
+               $('.navbar').addClass('fixed');
+
+                           }else{
+               $('.navbar').removeClass('fixed');
+
+                           }
             if (responsive >= 768) {
                 parallax();
             }
