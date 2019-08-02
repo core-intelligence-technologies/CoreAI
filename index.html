@@ -350,8 +350,8 @@ var x = 0,
     i = 0;
 var num_columns = Math.ceil(w / 10);
 var num_rows = Math.ceil(h / 10) * 10;
-var alive = '#16a085';
-var dead = '#1abc9c';
+var alive = '#ffffff';
+var dead = '#03a3b6';
 while (true) {
     var fill = (Math.random() > 0.5) ? alive : dead;
     var rect = makeSVG('rect', {
@@ -434,7 +434,7 @@ setInterval(function() {
         var pop = to_revive.pop();
         pop.setAttribute('fill', alive);
     }
-}, 500);
+}, 250);
 </script>
 
 </html>
