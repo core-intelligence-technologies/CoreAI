@@ -1040,7 +1040,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232526', end
 
 }
 .filter-gradient.blue:after{
-  background-color: #2caee0;
+  background-color: #228fb9;
   }
 .filter-gradient.green:after{
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
