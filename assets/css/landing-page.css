@@ -1025,7 +1025,7 @@ color: #333;
     display: block;
     z-index: 1;
     content: "";
-    opacity: .5;
+    opacity: .8;
 }
 .filter-gradient.gray:after{
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -1040,7 +1040,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232526', end
 
 }
 .filter-gradient.blue:after{
-  background-color: #228fb9;
+background: #24C6DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #2139c2, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #2139c2, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
 .filter-gradient.green:after{
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
