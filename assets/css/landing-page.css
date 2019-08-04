@@ -1025,7 +1025,7 @@ color: #333;
     display: block;
     z-index: 1;
     content: "";
-    opacity: .8;
+    opacity: .6;
 }
 .filter-gradient.gray:after{
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
