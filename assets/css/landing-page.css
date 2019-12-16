@@ -121,6 +121,9 @@ a:active {
 .navbar.inner {
   background: rgba(44, 174, 224, 0.9);
 }
+.navbar.gray{
+  background: #161127b3;
+}
 .navbar.fixed {
   background: rgba(44, 174, 224, 0.9);
 }
@@ -1216,16 +1219,16 @@ i {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232526', endColorstr='#de414345',GradientType=0 ); /* IE6-8 */
 }
 .filter-gradient.blue:after {
-  background: #24c6dc; /* fallback for old browsers */
+  background: #1eaabc; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
-    #2139c2,
-    #24c6dc
+    #0d1647,
+    #1eaabc
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to top,
-    #2139c2,
-    #24c6dc
+    #0d1647,
+    #1eaabc
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .filter-gradient.green:after {
@@ -2126,6 +2129,66 @@ i {
   min-height: 100vh;
   padding-top: 180px;
   padding-bottom: 100px;
+}
+.sec-full.about{
+  background: #FFF url("../img/about.jpg") no-repeat;
+  background-size: cover !important;
+  min-height: 50vw;
+  padding-top: 140px;
+  background-attachment: fixed;
+  padding-bottom: 200px;
+}
+
+.sec-full.about h1{
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+.sec-full.about h3{
+  color:#FFF;
+  font-size: 28px;
+  line-height: 30px;
+  margin-bottom: 50px;
+  /* text-transform: uppercase; */
+}
+.about-sec{
+  padding:100px 0;
+  position: relative;
+}
+.about-sec .row{
+  display: flex;
+  justify-content: space-between;
+}
+.about-sec .row ul{
+  padding-left:10px;
+  margin-left: 10px;
+}
+.about-sec .dlr{
+  position: relative;
+  top: -140px;
+  margin-bottom: -120px;
+}
+.about-sec .dlr+p{
+  font-size: 22px;
+}
+.about-sec.first{
+  position: relative;
+}
+.about-sec.first:before{
+  content:" ";
+  width:100%;
+  height:11vw;
+  background: url('../img/curve-white.svg') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top:-10vw;
+}
+.about-sec.gray{
+  background:#f3f3f3;
+}
+
+.sec-full.about p{
+  font-size: 16px;
 }
 .sec-full h1{
   font-size: 64px;
