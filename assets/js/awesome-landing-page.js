@@ -12,120 +12,154 @@
  
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
+$(function() {
+  var i = 1;
+  var count = $(".product-item").length;
+  setInterval(() => {
+    $(".product-item").fadeOut();
+    $(".preview-items img").fadeOut();
+    $(".preview-items img:eq(" + i + ")")
+      .delay(500)
+      .fadeIn();
+    $(".product-item:eq(" + i + ")")
+      .delay(500)
+      .fadeIn();
+    if (i == count - 1) {
+      i = 0;
+    } else {
+      i++;
+    }
+  }, 7000);
+  $("a.view-products").click(function(e) {
+    e.preventDefault();
+    $("html,body").animate(
+      {
+        scrollTop: $("#products-preview").offset().top - 200
+      },
+      1000
+    );
+  });
+});
 
-        var big_image;
-        $().ready(function() {
+var big_image;
+$().ready(function() {
+  new WOW().init();
 
-            new WOW().init();
+  $(".selector").click(function() {
+    SelectColor(this);
+  });
+  var selectCol = 0;
+  if (selectCol == 0) {
+    if ($("body").hasClass("landing-page1")) {
+    }
+  }
 
-            
-            $('.selector').click(function() {
-                SelectColor(this);
-            });
-            var selectCol = 0;
-            if (selectCol == 0) {
-                if ($('body').hasClass('landing-page1')) {
+  // Get the video
+  var video = document.getElementById("myVideo");
 
-                }
-            }
+  video.play();
+});
 
-// Get the video
-var video = document.getElementById("myVideo");
+$(window).on("scroll", function() {
+  responsive = $(window).width();
+  pos = $(window).scrollTop();
+  if (pos > 630) {
+    $(".navbar").addClass("fixed");
+  } else {
+    $(".navbar").removeClass("fixed");
+  }
+  if (responsive >= 768) {
+    parallax();
+  }
+});
 
+function SelectColor(btn) {
+  oldColor = $(".filter-gradient").attr("data-color");
+  newColor = $(btn).attr("data-color");
 
-video.play();
+  oldButton = $('a[id^="Demo"]').attr("data-button");
+  newButton = $(btn).attr("data-button");
 
-        });
+  $(".filter-gradient")
+    .removeClass(oldColor)
+    .addClass(newColor)
+    .attr("data-color", newColor);
 
-        $(window).on('scroll', function() {
-            responsive = $(window).width();
-            pos = $(window).scrollTop();
-            if(pos>630){
-               $('.navbar').addClass('fixed');
+  $('a[id^="Demo"]')
+    .removeClass("btn-" + oldButton)
+    .addClass("btn-" + newButton)
+    .attr("data-button", newButton);
 
-                           }else{
-               $('.navbar').removeClass('fixed');
+  $(".carousel-indicators")
+    .removeClass("carousel-indicators-" + oldColor)
+    .addClass("carousel-indicators-" + newColor);
 
-                           }
-            if (responsive >= 768) {
-                parallax();
-            }
-        });
+  $(".card")
+    .removeClass("card-" + oldColor)
+    .addClass("card-" + newColor);
 
-        function SelectColor(btn) {
-            oldColor = $('.filter-gradient').attr('data-color');
-            newColor = $(btn).attr('data-color');
+  $(".selector").removeClass("active");
+  $(btn).addClass("active");
+}
 
-            oldButton = $('a[id^="Demo"]').attr('data-button');
-            newButton = $(btn).attr('data-button');
+$(".switch").each(function() {
+  var selector = $(this).parent("li");
+  $(this).click(function() {
+    if (selector.siblings().hasClass("active")) {
+      selector.addClass("active");
+      selector.siblings().removeClass("active");
+      var slide = $(this).attr("data-slide");
+      var lastClass = $("body")
+        .attr("class")
+        .split(" ")
+        .pop();
+      $("body").removeClass(lastClass);
+      $("body").addClass("landing-page" + slide);
+    }
+  });
+});
 
-            $('.filter-gradient').removeClass(oldColor).addClass(newColor).attr('data-color', newColor);
+var parallax = debounce(function() {
+  no_of_elements = 0;
+  $(".parallax").each(function() {
+    var $elem = $(this);
 
-            $('a[id^="Demo"]').removeClass("btn-" + oldButton).addClass("btn-" + newButton).attr('data-button', newButton);
+    if (isElementInViewport($elem)) {
+      var parent_top = $elem.offset().top;
+      var window_bottom = $(window).scrollTop();
+      var $image = $elem.find(".parallax-background-image");
+      var $oVal = (window_bottom - parent_top) / 3;
+      $image.css("margin-top", $oVal + "px");
+    }
+  });
+}, 6);
 
-            $('.carousel-indicators').removeClass("carousel-indicators-" + oldColor).addClass("carousel-indicators-" + newColor);
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this,
+      args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    }, wait);
+    if (immediate && !timeout) func.apply(context, args);
+  };
+}
 
-            $('.card').removeClass("card-" + oldColor).addClass("card-" + newColor);
+function isElementInViewport(elem) {
+  var $elem = $(elem);
 
-            $('.selector').removeClass('active');
-            $(btn).addClass('active');
-        }
+  // Get the scroll position of the page.
+  var scrollElem =
+    navigator.userAgent.toLowerCase().indexOf("webkit") != -1 ? "body" : "html";
+  var viewportTop = $(scrollElem).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
 
-        $('.switch').each(function() {
-            var selector = $(this).parent('li')
-            $(this).click(function() {
-                if (selector.siblings().hasClass('active')) {
-                    selector.addClass('active');
-                    selector.siblings().removeClass('active');
-                    var slide = $(this).attr('data-slide')
-                    var lastClass = $('body').attr('class').split(' ').pop();
-                    $('body').removeClass(lastClass);
-                    $('body').addClass('landing-page' + slide);
-                }
-            });
-        });
+  // Get the position of the element on the page.
+  var elemTop = Math.round($elem.offset().top);
+  var elemBottom = elemTop + $elem.height();
 
-        var parallax = debounce(function() {
-            no_of_elements = 0;
-            $('.parallax').each(function() {
-                var $elem = $(this);
-
-                if (isElementInViewport($elem)) {
-                    var parent_top = $elem.offset().top;
-                    var window_bottom = $(window).scrollTop();
-                    var $image = $elem.find('.parallax-background-image')
-                    var $oVal = ((window_bottom - parent_top) / 3);
-                    $image.css('margin-top', $oVal + 'px');
-                }
-            });
-        }, 6)
-
-        function debounce(func, wait, immediate) {
-            var timeout;
-            return function() {
-                var context = this,
-                    args = arguments;
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = null;
-                    if (!immediate) func.apply(context, args);
-                }, wait);
-                if (immediate && !timeout) func.apply(context, args);
-            };
-        };
-
-
-        function isElementInViewport(elem) {
-            var $elem = $(elem);
-
-            // Get the scroll position of the page.
-            var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
-            var viewportTop = $(scrollElem).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
-
-            // Get the position of the element on the page.
-            var elemTop = Math.round($elem.offset().top);
-            var elemBottom = elemTop + $elem.height();
-
-            return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
-        }
+  return elemTop < viewportBottom && elemBottom > viewportTop;
+}
