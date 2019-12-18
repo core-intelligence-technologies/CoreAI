@@ -124,6 +124,9 @@ a:active {
 .navbar.gray{
   background: #161127b3;
 }
+.navbar.trans{
+  background: transparent;
+}
 .navbar.fixed {
   background: rgba(44, 174, 224, 0.9);
 }
@@ -2202,7 +2205,81 @@ top:50px;
 .sec-full.products .view-products:hover{
 background: rgba(44, 174, 224,0.7);
 }
+.sec-full.people{
+  background:url('../img/brain.jpg') no-repeat;  /* fallback for old browsers */
+  background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+min-height: 65vw;
+background-position: center center;
+}
 
+.sec-full.people .services{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 150px;
+}
+.sec-full.people .services .service-item{
+  border-radius: 15px;
+  background: #FFF;
+  text-align: center;
+  padding:0 20px;
+  margin: 0 5px;
+  flex:0 1 20%;
+  transition: all 300ms;
+}
+.sec-full.people .services .service-item:nth-child(1),
+.sec-full.people .services .service-item:nth-child(5)
+
+{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.sec-full.people .services .service-item:nth-child(2),
+.sec-full.people .services .service-item:nth-child(4)
+
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sec-full.people .services .service-item:hover{
+  background: #8E2DE2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+transform:scale(1.05);
+transform-origin: center;
+}
+.sec-full.people .services .service-item:hover p,
+.sec-full.people .services .service-item:hover h4{
+  color:#FFF;
+}
+
+
+
+.sec-full.people .services .service-item h4{
+  color: rgba(44, 174, 224,1);
+  font-size: 16px;
+  font-weight: bold;
+  
+}
+.sec-full.people .services .service-item  p {
+  color:#222;
+  border-bottom: 1px solid #DDD;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.sec-full.people .services .service-item  p:last-child{
+  border-bottom: none;
+}
+.sec-full.people h1{
+  font-weight: lighter;
+  line-height: 80px;
+}
 .about-sec{
   padding:100px 0;
   position: relative;
