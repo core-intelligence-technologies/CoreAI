@@ -128,7 +128,7 @@ a:active {
   background: transparent;
 }
 .navbar.fixed {
-  background: rgba(44, 174, 224, 0.9);
+  /* background: rgba(44, 174, 224, 0.9); */
 }
 .nav-brand {
   float: left;
@@ -1183,7 +1183,7 @@ i {
   display: block;
   z-index: 1;
   content: "";
-  opacity: 0.7;
+  opacity: 0.85;
 }
 .filter-gradient.gray:after {
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -1227,12 +1227,14 @@ i {
   background: -webkit-linear-gradient(
     to top,
     #0d1647,
-    #1eaabc
+    #1f92a1
+ 
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to top,
     #0d1647,
-    #1eaabc
+    #1f92a1
+ 
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .filter-gradient.green:after {
@@ -1353,7 +1355,7 @@ i {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', endColorstr='#561111',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 }
 .section-no-padding {
-  padding-bottom: 0;
+  padding: 0;
 }
 
 .landing-page .footer {
@@ -2364,6 +2366,19 @@ transform-origin: center;
 .product-item:first-child,
 .preview-items img:first-child{
   display: block;
+}
+.home-hero:before{
+  content: " ";
+  background: url(../img/core.svg) no-repeat;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background-size: cover;
+  height: 25vw;
+  width: 100%;
+  z-index: 2;
+  background-position: bottom;
 }
 @keyframes pan{
   from{

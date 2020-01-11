@@ -28,7 +28,7 @@
 
   <body class="landing-page landing-page1">
     <nav
-      class="navbar navbar-transparent navbar-top wow fadeInDown inner gray"
+      class="navbar navbar-transparent navbar-top  inner gray"
    
       role="navigation"
     >
@@ -83,7 +83,7 @@
               </a>
             </li> -->
             <li>
-              <a href="./#contact">
+              <a href="#contact">
                 Contact Us
               </a>
             </li>
@@ -138,28 +138,27 @@
               <div class="product-item">
                 <h2>TECHO</h2>
                 <p>
-                  Techo is a fully reausable automated machine learning capable
-                  of
+                    Techo is a fully reusable automated machine learning platform capable of :
+                  
                 </p>
                 <ul>
-                  <li>Data Wranging</li>
+                  <li>Data Wrangling</li>
 
-                  <li>Calssification</li>
+                  <li>Classification</li>
                   <li>Regression</li>
                   <li>Model Diagnosis</li>
+                  
                 </ul>
               </div>
               <div class="product-item">
                 <h2>HYPERION</h2>
                 <p>
-                  Automated Software Specification Generation It is critical to
-                  write specifications when detailing the requirements of a
-                  software solution to a pain point.
+                    Automated Software Specification Generation It is critical to write specifications
+                    when detailing the requirements of a software solution to a pain point.
                 </p>
                 <p>
-                  Hyperion vastly speeds up the creation of such specifications
-                  using machine learning to automatically generates
-                  specifications for you.”
+                    Hyperion vastly speeds up the creation of such specifications using machine learning
+                    to automatically generates specifications for you.
                 </p>
               </div>
               <div class="product-item">
@@ -171,6 +170,67 @@
           </div>
         </div>
       </div>
+      <div class="section section-no-padding">
+          <div
+            class="parallax filter-gradient blue"
+            data-color="blue"
+            id="contact"
+          >
+            <div class="parallax-background">
+              <img
+                class="parallax-background-image"
+                src="assets/img/template/bg3.jpg"
+              />
+            </div>
+            <div class="info">
+              <h1>Get In Touch With Us</h1>
+              <form
+                method="POST"
+                class="wow fadeInUp"
+                data-wow-duration="2s"
+                action="https://formspree.io/paul.steven.conyngham@gmail.com"
+              >
+                <div class="form-group">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="_replyto"
+                    placeholder="Email"
+                    required=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    class="form-control"
+                    type="tel"
+                    name="phone"
+                    placeholder="Contact Number"
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    placeholder="Message"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <input
+                  type="submit"
+                  value="Send Message"
+                  class="btn btn-neutral btn-lg btn-fill"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
       <footer class="footer">
         <div class="container">
           <nav class="pull-left">
@@ -204,7 +264,7 @@
             </a>
           </div>
           <div class="copyright">
-            &copy; 2019, Core Intelligence Technologies. All Rights Reserved.
+              &copy; <span id="currentYear"></span>, Core Intelligence Technologies Pty Ltd. All Rights Reserved.
           </div>
         </div>
       </footer>

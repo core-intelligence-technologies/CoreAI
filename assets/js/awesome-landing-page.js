@@ -15,6 +15,8 @@
 $(function() {
   var i = 1;
   var count = $(".product-item").length;
+  var dt = new Date();
+  $('#currentYear').text(dt.getFullYear());
   setInterval(() => {
     $(".product-item").fadeOut();
     $(".preview-items img").fadeOut();
