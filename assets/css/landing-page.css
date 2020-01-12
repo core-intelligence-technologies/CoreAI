@@ -2052,6 +2052,24 @@ i {
 }
 
 @media (max-width: 767px) {
+  .sec-full.people .services{
+    flex-direction: column !important;
+  }
+  .sec-full.people .services .service-item{
+    transition: none !important;
+    animation: none !important;
+    margin:15px 0 !important;
+  }
+  .sec-full.people{
+    padding-bottom: 30px;
+  }
+  .sec-full.people .services{
+    margin: 50px 0 0 0 !important;
+  }
+  .sec-full.people h1{
+    font-size:22px;
+    line-height: 35px !important;
+  }
   .fixed-plugin {
     position: absolute;
   }
