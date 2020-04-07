@@ -586,7 +586,7 @@ footer .footer-menu ul li a {
 }
 
 .about-us-page .about-title {
-  font: 700 48px/69px Poppins;
+  font: 700 42px/69px Poppins;
   color: #FF5C66;
 }
 
@@ -612,7 +612,7 @@ footer .footer-menu ul li a {
 .about-us-page .about-btns .btn-about {
   font: bold 20px/37px Lato;
   text-transform: uppercase;
-  padding: 15px 55px;
+  padding: 15px 35px;
   border-radius: 80px;
   display: inline-block;
   -webkit-box-shadow: 0px 0px 75px #0000003D;
@@ -925,6 +925,18 @@ footer .footer-menu ul li a {
 }
 
 @media (min-width: 1200px) and (max-width: 1640px) {
+  .partners .partner-block .partent-img {
+    width: 180px;
+  }
+  .partners .section-title {
+    padding-bottom: 0;
+  }
+  .partners .partner-block .partner-title h5 {
+    font-size: 22px;
+  }
+  .partners .partner-block .partner-description {
+    font-size: 16px;
+  }
   .main-header nav {
     margin-top: 15px;
   }

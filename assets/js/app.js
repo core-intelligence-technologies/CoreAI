@@ -1,4 +1,8 @@
 $(function() {
+
+    new WOW().init();
+
+
     $(".testimonials").owlCarousel({
         margin: 0,
         loop: true,
