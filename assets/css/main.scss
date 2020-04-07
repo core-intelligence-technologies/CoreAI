@@ -909,7 +909,10 @@ footer {
     }
 }
 
-@media(max-width: 1200px) {
+@media(max-width: 1199px) {
+    #contact iframe {
+        min-height: 500px;
+    }
     .about-us-page {
         padding-bottom: 70px;
         .about-title {}
@@ -922,6 +925,12 @@ footer {
                 }
             }
         }
+    }
+    .different:after {
+        background-size: cover;
+    }
+    .contact .contact-form {
+        padding-left: 20px;
     }
 }
 

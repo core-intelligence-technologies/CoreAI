@@ -1016,7 +1016,10 @@ footer .footer-menu ul li a {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
+  #contact iframe {
+    min-height: 500px;
+  }
   .about-us-page {
     padding-bottom: 70px;
   }
@@ -1032,6 +1035,12 @@ footer .footer-menu ul li a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .different:after {
+    background-size: cover;
+  }
+  .contact .contact-form {
+    padding-left: 20px;
   }
 }
 
