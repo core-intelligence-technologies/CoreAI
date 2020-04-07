@@ -712,6 +712,7 @@ footer {
         p {
             font: 400 20px/32px Lato;
             color: #2E2E2E;
+            margin-top: 30px;
         }
     }
 }
@@ -823,21 +824,28 @@ footer {
 
 // Media
 @media (min-width:1200px) and (max-width:1640px) {
+    .main-header nav {
+        margin-top: 15px;
+    }
     .main-header nav ul li a {
         font-size: 18px;
     }
     #particles-js .centered h1 {
         margin-top: 70px;
-        margin-bottom: 35px;
-        font: 600 50px/60px Poppins;
+        margin-bottom: 25px;
+        font: 600 40px/55px Poppins;
     }
     #particles-js .centered p {
-        font: 300 20px/34px Lato;
+        font: 300 18px/32px Lato;
+        margin-bottom: 25px;
     }
     #particles-js .centered .find-more {
         padding: 15px 40px;
         display: inline-block;
         font: 700 18px/32px Lato;
+    }
+    .wwd .col-md-12 {
+        max-width: 80%;
     }
     .continue {
         font: 700 20px/36px Poppins;
@@ -853,6 +861,16 @@ footer {
     }
     .product-banner p {
         font: 700 22px/40px Poppins;
+    }
+    .product-header .product-centered {
+        margin-top: 60px;
+    }
+    .product-header .product-centered h1 {
+        font: 700 36px/58px Poppins;
+        margin-bottom: 30px;
+    }
+    .product-header .product-centered p {
+        font: 700 24px/44px Poppins;
     }
 }
 
