@@ -122,10 +122,8 @@ h6 {
 }
 
 #particles-js.product-header {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: -webkit-gradient(linear, left top, right top, from(#64004D), to(#C80066)) 0% 0% no-repeat padding-box;
+  background: linear-gradient(90deg, #64004D 0%, #C80066 100%) 0% 0% no-repeat padding-box;
 }
 
 #particles-js.people-header {
@@ -640,19 +638,6 @@ footer .footer-menu ul li a {
   overflow: hidden;
 }
 
-.about-us-page .left-side {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .product-header .product-centered {
   margin-top: 110px;
 }
@@ -861,8 +846,8 @@ footer .footer-menu ul li a {
 
 .people-columns {
   position: relative;
-  top: -360px;
-  margin-bottom: -200px;
+  top: -25vh;
+  margin-bottom: -10vh;
 }
 
 .people-columns .columns {
@@ -982,6 +967,21 @@ footer .footer-menu ul li a {
   }
   .product-header .product-centered p {
     font: 700 24px/44px Poppins;
+  }
+  .people-header .people-centered {
+    margin-top: 70px;
+  }
+  .about-us-page .about-title {
+    font: 700 38px/50px Poppins;
+  }
+  .about-us-page .about-description {
+    margin-top: 25px;
+  }
+  .about-us-page .about-description p {
+    font: 400 16px/28px Lato;
+  }
+  .about-us-page {
+    padding-top: 40px;
   }
 }
 

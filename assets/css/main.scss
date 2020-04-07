@@ -114,10 +114,7 @@ h6 {
     position: relative;
     overflow: hidden;
     &.product-header {
-        background-color: transparent;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        background: linear-gradient(90deg, #64004D 0%, #C80066 100%) 0% 0% no-repeat padding-box;
         .particles-js-canvas-el {
             // display: none;
         }
@@ -573,11 +570,6 @@ footer {
         overflow: hidden;
         img {}
     }
-    .left-side {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
 }
 
 .product-header {
@@ -768,8 +760,8 @@ footer {
 
 .people-columns {
     position: relative;
-    top: -360px;
-    margin-bottom: -200px;
+    top: -25vh;
+    margin-bottom: -10vh;
     .columns {
         display: flex;
         text-align: center;
@@ -871,6 +863,21 @@ footer {
     }
     .product-header .product-centered p {
         font: 700 24px/44px Poppins;
+    }
+    .people-header .people-centered {
+        margin-top: 70px;
+    }
+    .about-us-page .about-title {
+        font: 700 38px/50px Poppins;
+    }
+    .about-us-page .about-description {
+        margin-top: 25px;
+    }
+    .about-us-page .about-description p {
+        font: 400 16px/28px Lato;
+    }
+    .about-us-page {
+        padding-top: 40px;
     }
 }
 
