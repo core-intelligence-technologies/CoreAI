@@ -756,18 +756,28 @@ footer {
             font: 700 48px/69px Poppins;
         }
         p {
-            font: 400 30px/49px Poppins;
+            font: 400 22px/42px Poppins;
         }
     }
 }
 
 .people-columns {
     position: relative;
-    top: -25vh;
-    margin-bottom: -10vh;
+    top: -15vh;
+    margin-bottom: 0vh;
     .columns {
         display: flex;
         text-align: center;
+        .column {
+            img {
+                height: 50px;
+                position: absolute;
+                top: -140px;
+                margin: auto;
+                left: 0;
+                right: 0;
+            }
+        }
         .column-title {
             font: 700 20px/26px Poppins;
             color: #fff;
@@ -811,9 +821,13 @@ footer {
 
 .people-continue {
     padding-bottom: 150px;
-    p {
+    h2 {
         font: 700 30px/49px Poppins;
         color: #0084FF;
+    }
+    p {
+        font: 400 18px/30px Poppins;
+        margin-bottom: 8px;
     }
 }
 

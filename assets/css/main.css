@@ -846,13 +846,13 @@ footer .footer-menu ul li a {
 }
 
 .people-header .people-centered p {
-  font: 400 30px/49px Poppins;
+  font: 400 22px/42px Poppins;
 }
 
 .people-columns {
   position: relative;
-  top: -25vh;
-  margin-bottom: -10vh;
+  top: -15vh;
+  margin-bottom: 0vh;
 }
 
 .people-columns .columns {
@@ -860,6 +860,15 @@ footer .footer-menu ul li a {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+}
+
+.people-columns .columns .column img {
+  height: 50px;
+  position: absolute;
+  top: -140px;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 
 .people-columns .columns .column-title {
@@ -917,9 +926,14 @@ footer .footer-menu ul li a {
   padding-bottom: 150px;
 }
 
-.people-continue p {
+.people-continue h2 {
   font: 700 30px/49px Poppins;
   color: #0084FF;
+}
+
+.people-continue p {
+  font: 400 18px/30px Poppins;
+  margin-bottom: 8px;
 }
 
 .footer-nav {
