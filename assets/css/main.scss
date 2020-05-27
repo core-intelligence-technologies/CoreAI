@@ -124,6 +124,38 @@ h6 {
     overflow: hidden;
     background: url("../images/23831-min.jpg") no-repeat;
   }
+  &.consulting-hero {
+    min-height: unset;
+    max-height: 600px;
+    height: 100vh;
+    .careers-centered {
+      padding-top: 80px;
+      text-align: left;
+      h1 {
+        font: 100 46px/70px Poppins;
+        margin-bottom: 20px;
+        @media (max-width: 1024px) {
+          font: 100 36px/60px Poppins;
+        }
+        @media (max-width: 767px) {
+          br {
+            display: none;
+          }
+          font: 100 26px/46px Poppins;
+        }
+      }
+      p {
+        padding: 0;
+        font: 400 26px/44px Poppins;
+        @media (max-width: 1024px) {
+          font: 400 22px/40px Poppins;
+        }
+        @media (max-width: 767px) {
+          font: 400 18px/32px Poppins;
+        }
+      }
+    }
+  }
   &.product-header {
     background: linear-gradient(90deg, #64004d 0%, #c80066 100%) 0% 0% no-repeat
       padding-box;
@@ -173,6 +205,9 @@ h6 {
     top: 0;
     bottom: 0;
     z-index: 1;
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
   .top-content {
     position: relative;
