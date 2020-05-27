@@ -134,12 +134,12 @@ h6 {
 
 #particles-js.consulting-hero {
   min-height: unset;
-  max-height: 600px;
+  max-height: 700px;
   height: 100vh;
 }
 
 #particles-js.consulting-hero .careers-centered {
-  padding-top: 80px;
+  padding-top: 120px;
   text-align: left;
 }
 
