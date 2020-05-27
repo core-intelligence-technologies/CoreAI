@@ -132,12 +132,6 @@ h6 {
   background: url("../images/23831-min.jpg") no-repeat;
 }
 
-#particles-js.consulting-hero {
-  min-height: unset;
-  max-height: 700px;
-  height: 100vh;
-}
-
 #particles-js.consulting-hero .careers-centered {
   padding-top: 120px;
   text-align: left;
