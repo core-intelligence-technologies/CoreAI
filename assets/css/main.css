@@ -304,6 +304,18 @@ grow-2 {
 .footer-info:hover {
   transform: translateY(-30px);
 }
+.footer-info div {
+  top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.footer-info div p {
+  margin-top: 1rem;
+  color: #fff;
+}
 
 @keyframes twinkle {
   0% {

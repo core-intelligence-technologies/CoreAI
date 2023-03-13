@@ -370,6 +370,20 @@ grow-2 {
   &:hover {
     transform: translateY(-30px);
   }
+
+  div {
+    top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    p {
+      margin-top: 1rem;
+      color: #fff;
+    }
+  }
 }
 
 @keyframes twinkle {
