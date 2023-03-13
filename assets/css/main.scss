@@ -66,6 +66,8 @@ grow-2 {
 
 .main-header {
   margin-top: 70px;
+  z-index: 2;
+  position: relative;
 
   nav {
     margin-top: 30px;
@@ -130,13 +132,13 @@ grow-2 {
 
 #particles-js {
   background-color: transparent;
-  background: url("../images/background2-bolong-compressed.png");
-  // background: url("../images/planet-background.png");
+  // background: url("../images/background2-bolong-compressed.png");
+  background: url("../images/space-background.png");
   background-repeat: no-repeat;
   background-position: 0% 96%;
   // background-position: center;
   background-size: cover;
-  z-index: 1;
+  z-index: -1;
   height: 120vh;
   position: relative;
   overflow: hidden;
@@ -268,6 +270,8 @@ grow-2 {
   }
   .centered {
     color: #fff;
+    z-index: 2;
+    position: relative;
     h1 {
       font-family: "Poppins", sans-serif;
       color: #fff;
@@ -301,27 +305,8 @@ grow-2 {
       }
     }
   }
-}
 
-.footer-info {
-  width: 100vw;
-  // min-height: 40vh;
-
-  background: url("../images/bottom-wave-orange.png") no-repeat;
-  background-repeat: no-repeat;
-  width: 100vw;
-  min-height: 40vh;
-  background-size: cover;
-  content: " ";
-  position: absolute;
-  top: 75vh;
-  z-index: -1;
-  background-color: transparent;
-  transition: transform 0.6s ease-out;
-  transition-delay: 0ms;
-  &:hover {
-    transform: translateY(-30px);
-  }
+  // dust
 
   li {
     list-style-type: none;
@@ -336,7 +321,7 @@ grow-2 {
     width: 100000px;
     top: -8500px;
     left: -8000px;
-    z-index: 999;
+    z-index: 1;
     // height: 100%;
     // width: 100vw;
     animation-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
@@ -363,6 +348,27 @@ grow-2 {
     background: url('https://image.ibb.co/cymRwa/dust3.jpg');
     background-repeat: repeat;
     animation-duration: 350s;
+  }
+}
+
+.footer-info {
+  width: 100vw;
+  // min-height: 40vh;
+
+  background: url("../images/bottom-wave-orange.png") no-repeat;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 45vh;
+  background-size: cover;
+  content: " ";
+  position: absolute;
+  top: 80vh;
+  z-index: 2;
+  background-color: transparent;
+  transition: transform 0.6s ease-out;
+  transition-delay: 0ms;
+  &:hover {
+    transform: translateY(-30px);
   }
 }
 
@@ -697,6 +703,7 @@ footer {
     padding-top: 50px;
     padding-bottom: 30px;
     .top-header {
+      z-index: 2;
       .logo {
         padding-top: 0;
       }
@@ -1482,6 +1489,8 @@ footer {
   }
   .main-header {
     display: none;
+    z-index: 3;
+    position: relative;
     nav {
       ul {
         flex-direction: column;

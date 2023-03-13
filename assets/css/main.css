@@ -61,6 +61,8 @@ grow-2 {
 
 .main-header {
   margin-top: 70px;
+  z-index: 2;
+  position: relative;
 }
 .main-header nav {
   margin-top: 30px;
@@ -110,11 +112,11 @@ grow-2 {
 
 #particles-js {
   background-color: transparent;
-  background: url("../images/background2-bolong-compressed.png");
+  background: url("../images/space-background.png");
   background-repeat: no-repeat;
   background-position: 0% 96%;
   background-size: cover;
-  z-index: 1;
+  z-index: -1;
   height: 120vh;
   position: relative;
   overflow: hidden;
@@ -216,6 +218,8 @@ grow-2 {
 }
 #particles-js .centered {
   color: #fff;
+  z-index: 2;
+  position: relative;
 }
 #particles-js .centered h1 {
   font-family: "Poppins", sans-serif;
@@ -249,56 +253,56 @@ grow-2 {
   background: #fff;
   color: #ff5c66;
 }
+#particles-js li {
+  list-style-type: none;
+}
+#particles-js .img {
+  position: absolute;
+  height: 100000px;
+  width: 100000px;
+  top: -8500px;
+  left: -8000px;
+  z-index: 1;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  animation-name: float;
+  animation-iteration-count: infinite;
+}
+#particles-js #img-1 {
+  opacity: 0.25;
+  background: url("https://image.ibb.co/jcTvpv/dust1.jpg");
+  background-repeat: repeat;
+  animation-duration: 600s;
+}
+#particles-js #img-2 {
+  opacity: 0.2;
+  background: url("https://image.ibb.co/goU1Uv/dust2.jpg");
+  background-repeat: repeat;
+  animation-duration: 450s;
+}
+#particles-js #img-3 {
+  opacity: 0.15;
+  background: url("https://image.ibb.co/cymRwa/dust3.jpg");
+  background-repeat: repeat;
+  animation-duration: 350s;
+}
 
 .footer-info {
   width: 100vw;
   background: url("../images/bottom-wave-orange.png") no-repeat;
   background-repeat: no-repeat;
   width: 100vw;
-  min-height: 40vh;
+  min-height: 45vh;
   background-size: cover;
   content: " ";
   position: absolute;
-  top: 75vh;
-  z-index: -1;
+  top: 80vh;
+  z-index: 2;
   background-color: transparent;
   transition: transform 0.6s ease-out;
   transition-delay: 0ms;
 }
 .footer-info:hover {
   transform: translateY(-30px);
-}
-.footer-info li {
-  list-style-type: none;
-}
-.footer-info .img {
-  position: absolute;
-  height: 100000px;
-  width: 100000px;
-  top: -8500px;
-  left: -8000px;
-  z-index: 999;
-  animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  animation-name: float;
-  animation-iteration-count: infinite;
-}
-.footer-info #img-1 {
-  opacity: 0.25;
-  background: url("https://image.ibb.co/jcTvpv/dust1.jpg");
-  background-repeat: repeat;
-  animation-duration: 600s;
-}
-.footer-info #img-2 {
-  opacity: 0.2;
-  background: url("https://image.ibb.co/goU1Uv/dust2.jpg");
-  background-repeat: repeat;
-  animation-duration: 450s;
-}
-.footer-info #img-3 {
-  opacity: 0.15;
-  background: url("https://image.ibb.co/cymRwa/dust3.jpg");
-  background-repeat: repeat;
-  animation-duration: 350s;
 }
 
 @keyframes twinkle {
@@ -604,6 +608,9 @@ footer .footer-menu ul li a {
 .page-header .top-content {
   padding-top: 50px;
   padding-bottom: 30px;
+}
+.page-header .top-content .top-header {
+  z-index: 2;
 }
 .page-header .top-content .top-header .logo {
   padding-top: 0;
@@ -1323,6 +1330,8 @@ footer .footer-menu ul li a {
   }
   .main-header {
     display: none;
+    z-index: 3;
+    position: relative;
   }
   .main-header nav ul {
     flex-direction: column;

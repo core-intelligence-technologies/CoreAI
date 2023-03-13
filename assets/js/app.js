@@ -41,7 +41,7 @@ $(function () {
   var parallax = $('#scene').parallax();
 
   for (var i = 1; i < 6; i++) {
-    twinkleLoop(i);
+    // twinkleLoop(i);
   };
 
   function twinkleLoop(i) {
