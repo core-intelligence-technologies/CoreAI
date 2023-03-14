@@ -37,18 +37,29 @@ $(function () {
     });
   }, 1000)
 
+  // var prevScroll = 0
+  // window.addEventListener('scroll', e => {
+  //   console.log("SCROLL", document.documentElement.scrollTop)
+  //   const direction = prevScroll > document.documentElement.scrollTop ? 1: -1
+  //   prevScroll = document.documentElement.scrollTop
+  //   if (document.documentElement.scrollTop < 350) {
+  //     $('.footer-info').css('transform', `translateY(${direction*20}px)`)
+  //   }
+  // })
                   
-  var parallax = $('#scene').parallax();
+  // var parallax = $('#scene').parallax();
 
   for (var i = 1; i < 6; i++) {
     // twinkleLoop(i);
   };
 
+  var speed = 400;
+
   function twinkleLoop(i) {
     var duration = ((Math.random() * 5) + 3)
-  
     duration = duration - ((495 - speed)/100)
     twinkle(i, duration)
+    console.log("twinkleloop called", duration)
   
     setTimeout(function() {
       twinkleLoop(i)
@@ -58,6 +69,7 @@ $(function () {
   function twinkle(id, duration) {
     var top = (Math.floor(Math.random() * 85) + 0) + '%';
     var left = (Math.floor(Math.random() * 85) + 0) + '%';
+    console.log("twinkle called", top, left)
 
     $('#speck' + id).remove();
     $('#specks').append("<div class='speck' id='speck" + id + "'></div>")
@@ -69,6 +81,14 @@ $(function () {
       'animation-name': 'twinkle',
     })
   }
+
+  // setInterval(() => {
+  //   $('.dust-img').css({
+  //     'top': '-85px',
+  //     'left': '-80px',
+  //   });
+  //   console.log("SHOULD SET")
+  // }, 2000)
 
   /**
   particlesJS("particles-js", {
@@ -182,3 +202,14 @@ $(function () {
     retina_detect: true,
   }); */
 });
+
+
+var prevScroll = 0
+function parallax() {
+  if (document.documentElement.scrollTop < 100 && Math.abs(document.documentElement.scrollTop - prevScroll) > 5) {
+    console.log("transform", document.documentElement.scrollTop)
+    const direction = prevScroll > document.documentElement.scrollTop ? 1: -1
+    $('#footer-info').css('transform', `translateY(${direction*10}px)`)
+  }
+    prevScroll = document.documentElement.scrollTop
+}

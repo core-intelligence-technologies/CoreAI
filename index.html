@@ -31,19 +31,19 @@
 		<title>Core Intelligence | WE BELIEVE INTELLIGENCE MAKES LIVES BETTER</title>
 	</head>
 
-	<body>
+	<body onscroll="parallax()">
 		<div id="particles-js" class="atf">
 			<div class="container top-content">
-				<div class="dust" data-friction-x="0.03" data-friction-y="0.05">
+				<div id="dust" data-friction-x="0.03" data-friction-y="0.05">
 					<li class="layer" id="specks" data-depth="0.1"></li>
 					<li class="layer" id="layer-1" data-depth="0.15">
-						<div class="img" id="img-1"></div>
+						<div class="dust-img" id="img-1"></div>
 					</li>
 					<!-- <li class="layer" id="layer-2" data-depth="0.25">
 						<div class="img" id="img-2"></div>
 					</li> -->
 					<li class="layer" id="layer-3" data-depth="0.45">
-						<div class="img" id="img-3"></div>
+						<div class="dust-img" id="img-3"></div>
 					</li>
 				</div>
 				<div class="top-header">
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 		<main>
-			<section id="specks" class="footer-info">
+			<section id="footer-info" class="footer-info">
 				<div class="col-lg-5">
 					<div class="footer-logo">
 						<img src="assets/images/footer-logo.png" alt="Core Integellence" />

@@ -256,12 +256,12 @@ grow-2 {
 #particles-js li {
   list-style-type: none;
 }
-#particles-js .img {
+#particles-js .dust-img {
   position: absolute;
-  height: 100000px;
-  width: 100000px;
-  top: -8500px;
-  left: -8000px;
+  height: 16000px;
+  width: 16000px;
+  top: -12500px;
+  left: -12000px;
   z-index: 1;
   animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
   animation-name: float;
@@ -277,7 +277,7 @@ grow-2 {
   opacity: 0.2;
   background: url("https://image.ibb.co/goU1Uv/dust2.jpg");
   background-repeat: repeat;
-  animation-duration: 450s;
+  animation-duration: 220s;
 }
 #particles-js #img-3 {
   opacity: 0.15;
@@ -298,11 +298,7 @@ grow-2 {
   top: 80vh;
   z-index: 2;
   background-color: transparent;
-  transition: transform 0.6s ease-out;
   transition-delay: 0ms;
-}
-.footer-info:hover {
-  transform: translateY(-30px);
 }
 .footer-info div {
   top: 20vh;
