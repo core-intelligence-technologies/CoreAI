@@ -27,22 +27,27 @@ $(function () {
     $(".main-header").slideToggle();
   });
   setTimeout(() => {
+    const TYPED_STRINGS = [
+      "We believe intelligence makes lives better.",
+      "We build the future.",
+      "We bridge the gap between human and machine.",
+      "We unlock the limitless potential of AI.",
+      "We commit to responsible AI, shaping a better world for all.",
+      "We fuel innovation with data-driven insights.",
+      "We empower businesses and individuals to thrive in a digital age.",
+      "Together, we propel humanity forward with the power of artificial intelligence.",
+    ]
     new Typed(".typed", {
-      strings: [
-        "We believe intelligence makes lives better.",
-        "We build the future.",
-        "We bridge the gap between human and machine.",
-        "We unlock the limitless potential of AI.",
-        "We commit to responsible AI, shaping a better world for all.",
-        "We fuel innovation with data-driven insights.",
-        "We empower businesses and individuals to thrive in a digital age.",
-        "Together, we propel humanity forward with the power of artificial intelligence.",
-      ],
+      strings: TYPED_STRINGS,
       loop: true,
       backDelay: 1000,
       typeSpeed: 60,
-      backSpeed: 30,
+      backSpeed: 0,
+      fadeOutDelay: 0,
       contentType: "html",
+      smartBackspace: false,
+      // onStringTyped: (arrayPos, self) => {
+      // }
     });
   }, 1000)
 
