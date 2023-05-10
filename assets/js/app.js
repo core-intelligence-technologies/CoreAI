@@ -26,6 +26,14 @@ $(function () {
   $(".hamburger-btn").click(function () {
     $(".main-header").slideToggle();
   });
+  $(window).resize(function() {
+    if ($(window).width() > 990) {
+      console.log("goes here")
+      $(".main-header").show()
+    } else {
+      $(".main-header").hide()
+    }
+   })
   setTimeout(() => {
     const TYPED_STRINGS = [
       "We believe intelligence makes lives better.",
