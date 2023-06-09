@@ -1947,8 +1947,9 @@ footer .footer-menu ul li a {
   box-sizing: border-box;
 }
 .member-avatar img {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
 .wow.fadeIn {
   opacity: 0;
