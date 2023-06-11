@@ -1962,3 +1962,11 @@ footer .footer-menu ul li a {
 .text-white {
   color: white;
 }
+
+@media (max-width: 480px) {
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+}
