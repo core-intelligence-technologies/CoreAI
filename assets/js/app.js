@@ -229,7 +229,6 @@ $(function () {
 var prevScroll = 0
 function parallax() {
   if (document.documentElement.scrollTop < 100 && Math.abs(document.documentElement.scrollTop - prevScroll) > 5) {
-    console.log("transform", document.documentElement.scrollTop)
     const direction = prevScroll > document.documentElement.scrollTop ? 1: -1
     $('#footer-info').css('transform', `translateY(${direction*10}px)`)
   }
