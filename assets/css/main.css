@@ -38,6 +38,10 @@ grow-2 {
   height: 100vh; /* Browser page width height */
 }
 
+.australian-leaders .overlay .container .section-title {
+  color: white !important; /* Ensures this rule takes precedence */
+}
+
 .bg-image {
   background-image: url('https://www.coreintelligence.com.au/assets/images/20230803_155403.jpg'); 
   background-size: cover;
