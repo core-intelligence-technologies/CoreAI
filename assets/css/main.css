@@ -39,8 +39,7 @@ grow-2 {
 }
 
 .bg-image {
-  background-color: red; /* Temporary test */
-  background-image: url('assets/images/20230803_155403.jpg'); 
+  background-image: url('https://www.coreintelligence.com.au/assets/images/20230803_155403.jpeg'); 
   background-size: cover;
   background-position: center;
   position: absolute;
