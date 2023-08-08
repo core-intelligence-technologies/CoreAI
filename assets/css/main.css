@@ -33,6 +33,40 @@ grow-2 {
   flex-grow: 2;
 }
 
+.australian-leaders {
+  position: relative;
+  height: 100vh; /* Browser page width height */
+}
+
+.bg-image {
+  background-image: url('20230803_155403.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.4); /* Transparent black overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
+
+.section-title {
+  color: white;
+  text-align: center;
+}
+
+
 .pointer {
   cursor: pointer;
 }
