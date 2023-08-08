@@ -39,7 +39,7 @@ grow-2 {
 }
 
 .bg-image {
-  background-image: url('assets/images/20230803_155403.jpg');
+  background-image: url('assets/images/20230803_155403.jpg'); 
   background-size: cover;
   background-position: center;
   position: absolute;
