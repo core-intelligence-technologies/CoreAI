@@ -48,23 +48,59 @@
 		<!-- Schema.org markup -->
 		<script type="application/ld+json">
 			{
-			  "@context" : "http://schema.org",
-			  "@type" : "LocalBusiness",
-			  "name" : "Core Intelligence",
-			  "image" : "https://www.coreintelligence.com.au/assets/images/footer-logo.png",
-			  "description": "AI consulting and development services in Sydney and Australia",
-			  "address" : {
-				"@type" : "PostalAddress",
-				"streetAddress" : "54 Oxford St",
-				"addressLocality" : "Sydney",
-				"addressRegion" : "NSW",
-				"postalCode" : "2000",
-				"addressCountry" : "AU"
-			  },
-			  "telephone" : "+61 2 8123 4567"
+			  "@context": "https://schema.org",
+			  "@type": "ItemList",
+			  "itemListElement": [
+			  
+				{
+				  "@type": "ListItem",
+				  "position": 1,
+				  "item": {
+					"@type": "FAQPage",
+					"mainEntity": [
+					  {
+						"@type": "Question",
+						"name": "What AI services do you offer?",
+						"acceptedAnswer": {
+						  "@type": "Answer",
+						  "text": "We offer AI consulting, development, auditing, and managed services."
+						}
+					  },
+					  {
+						"@type": "Question",
+						"name": "How can AI help my business?",  
+						"acceptedAnswer": {
+						  "@type": "Answer", 
+						  "text": "AI can optimize processes, lower costs, and provide insights from data."
+						}
+					   }
+					]
+				  }
+				},
+				
+				{
+				  "@type": "ListItem",
+				  "position": 2,
+				  "item": {
+					"@type": "LocalBusiness",
+					"name": "Core Intelligence",
+					"image": "https://www.coreintelligence.com.au/assets/images/logo.png",
+					"description": "AI consulting and development services in Sydney and Australia",
+					"address": {
+					  "@type": "PostalAddress",
+					  "streetAddress": "54 Oxford St",
+					  "addressLocality": "Sydney",
+					  "addressRegion": "NSW",
+					  "postalCode": "2000",
+					  "addressCountry": "AU" 
+					},
+					"telephone": "+61 2 8123 4567"
+				  }
+				}
+				
+			  ]
 			}
-		</script>
-
+			</script>
 
 	</head>
 
