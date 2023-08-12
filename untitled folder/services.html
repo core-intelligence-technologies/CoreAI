@@ -1,0 +1,163 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+
+            .screen {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                font-size: 3em; /* Increase text size by 300% */
+            }
+
+            .image-section::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .image-section::before {
+                content: "Image Section Text Here"; /* You can replace this with your content */
+                position: absolute;
+                z-index: 1;
+                color: white; /* Set text color to white */
+            }
+
+            .white-section::before {
+                content: "White Section Text Here"; /* You can replace this with your content */
+                position: absolute;
+                z-index: 1;
+                color: black; /* Set text color to black */
+            }
+
+            #section1 {
+                height: 100vh;
+            }
+
+            /* Background Images for Image Sections */
+            #section1, #section3, #section5 { 
+                background-image: url('image.jpg'); /* You can replace with specific images */
+            }
+
+            /* White Sections */
+            #section2, #section4, #section6 {
+                background: white;
+            }
+
+            /* Responsive Design (Optional) */
+            @media only screen and (max-width: 768px) {
+                .screen::before {
+                    font-size: 1em; /* Adjust as needed */
+                }
+            }
+            
+            nav {
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+
+            .main-header {
+                margin-top: 0;
+                z-index: 2;
+                position: relative;
+                background-color: transparent;
+            }
+            .main-header nav {
+                position: relative;
+                display: flex;  
+                align-items: center;
+                justify-content: space-between;
+            }
+            .main-header nav ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 100%;
+                overflow: hidden;
+            }
+            .main-header nav ul li:last-child {
+                background-color: rgb(255, 115, 0);
+                padding: 12px 24px;
+                border-radius: 4px;
+            }
+            .main-header nav ul li:last-child a {
+                margin: 0 auto !important;
+            }
+            .main-header nav ul li:last-child a:after {
+                display: none;
+            }
+            .main-header nav ul li a {
+                color: #fff;
+                position: relative;
+                margin-right: 60px;
+                font: 400 12px/16px Lato;
+                display: block;
+            }
+            .main-header nav ul li a:hover {
+                text-decoration: none;
+            }
+            .main-header nav ul li a:after {
+                content: "";
+                position: absolute;
+                margin-left: 25px;
+                width: 1px;
+                height: 16px;
+                background-color: #fff;
+                bottom: 0;
+                opacity: 0.5;
+            }
+
+            /* Background Images */
+            #section1 { background-image: url('/Users/Paul/git/core-intelligence-technologies.github.io/assets/images/background1.png'); }
+            #section2 { background-image: url('image2.jpg'); }
+            #section3 { background-image: url('image3.jpg'); }
+            #section4 { background-image: url('image4.jpg'); }
+            #section5 { background-image: url('image5.jpg'); }
+            #section6 { background-image: url('image6.jpg'); }
+
+        </style>
+        <title>Your Website</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav>
+                <div>
+                    <a href="/"><img src="assets/images/logo.png" width="240" height="auto" alt="Core Integellence"></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="consulting.html">Past Projects</a></li>
+                    <li><a href="people.html">Team</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="/#contact">Contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <section class="screen image-section" id="section1"></section>
+        <section class="screen white-section" id="section2"></section>
+        <section class="screen image-section" id="section3"></section>
+        <section class="screen white-section" id="section4"></section>
+        <section class="screen image-section" id="section5"></section>
+        <section class="screen white-section" id="section6"></section>
+    </body>
+    </html>
+        
