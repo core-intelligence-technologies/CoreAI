@@ -1,6 +1,6 @@
-import { Color, DirectionalLight, Matrix4, Vector3 } from "three";
-import { BezierMesh } from "troika-three-utils";
-import { InstancedUniformsMesh } from "three-instanced-uniforms-mesh";
+import { Color, DirectionalLight, Matrix4, Vector3 } from "./threejs/three.module.js";
+import { BezierMesh } from "./threejs/troika-three-utils.js";
+import { InstancedUniformsMesh } from "./threejs/three-instanced-uniforms-mesh.js";
 
 /*
 This example demonstrates InstancedUniformsMesh controlling many instances of
@@ -27,7 +27,7 @@ class CircleAnimation extends BasicThreeDemo {
     // Create a BezierMesh from which we can grab the geometry and material
     const bezierTemplate = new BezierMesh();
     bezierTemplate.material.uniforms.radius.value = 0.1;
-    console.log(bezierTemplate.position)
+    
     // bezierTemplate.material.roughness = 0.3
     // bezierTemplate.material.metalness = 0.8
 
@@ -66,7 +66,8 @@ class CircleAnimation extends BasicThreeDemo {
   }
   update() {
     // Adjust the inner point and control point uniforms in wave patterns
-    const angleShift = ((Date.now() % 3000) / 3000) * twoPi;
+    const waveSpeed = 0.5
+    const angleShift = (((Date.now() * waveSpeed) % 3000) / 3000) * twoPi;
     for (let i = 0; i < count; i++) {
       const angle = (i / count) * (Math.PI * 2);
       this.mesh.setUniformAt(
@@ -94,8 +95,8 @@ class CircleAnimation extends BasicThreeDemo {
     }
 
     // Rotate the whole thing slowly
-    this.mesh.rotation.x += 0.002;
-    this.mesh.rotation.y += 0.0005;
+    this.mesh.rotation.x += 0.001;
+    this.mesh.rotation.y += 0.0001;
   }
 }
 

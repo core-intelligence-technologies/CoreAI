@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './threejs/three.module.js';
 
 class BasicThreeDemo {
   constructor(container) {
@@ -6,8 +6,10 @@ class BasicThreeDemo {
     this.renderer = new THREE.WebGLRenderer({
       antialias: true
     });
-    this.renderer.setSize(container.offsetWidth * 0.7, container.offsetHeight * 0.7, false);
-    this.renderer.setPixelRatio(window.devicePixelRatio);
+    const resizer = this.dimensionResizer()
+
+    this.renderer.setSize(container.offsetWidth * resizer, container.offsetHeight * resizer, false);
+    this.renderer.setPixelRatio(Math.max(2,window.devicePixelRatio));
 
     container.append(this.renderer.domElement);
 
@@ -33,6 +35,9 @@ class BasicThreeDemo {
   init() {
     this.tick();
   }
+  dimensionResizer() {
+    return window.innerWidth < 400 ? 0.5: 0.7
+  }
   getViewSizeAtDepth(depth = 0) {
     const fovInRadians = (this.camera.fov * Math.PI) / 180;
     const height = Math.abs(
@@ -46,9 +51,12 @@ class BasicThreeDemo {
   onResize() {}
   onWindowResize() {
     // const canvas = this.renderer.domElement;
-    this.camera.aspect = window.innerWidth  / window.innerHeight;
+    const resizer = this.dimensionResizer()
+    const width = window.innerWidth * resizer
+    const height = window.innerHeight * resizer
+    this.camera.aspect = width  / height;
     this.camera.updateProjectionMatrix();
-    this.setSize(window.innerWidth, window.innerHeight)
+    this.setSize(width, height)
   }
   dispose() {
     this.disposed = true;
@@ -60,12 +68,12 @@ class BasicThreeDemo {
   tick() {
     if (this.disposed) return;
     // not working, need investigate more, use jquery on window resize for now
-    // if (resizeRendererToDisplaySize(this.renderer, this.setSize)) {
-    //   const canvas = this.renderer.domElement;
-    //   this.camera.aspect = canvas.clientWidth  / canvas.clientHeight;
-    //   this.camera.updateProjectionMatrix();
-    //   this.onResize();
-    // }
+    if (resizeRendererToDisplaySize(this.renderer, this.setSize)) {
+      const canvas = this.renderer.domElement;
+      this.camera.aspect = canvas.clientWidth  / canvas.clientHeight;
+      this.camera.updateProjectionMatrix();
+      this.onResize();
+    }
     this.render();
     this.update();
     requestAnimationFrame(this.tick);

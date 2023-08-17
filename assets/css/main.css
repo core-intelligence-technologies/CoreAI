@@ -5,9 +5,11 @@
 html,
 body {
   margin: 0;
+  padding: 0;
   font-family: "Lato", sans-serif;
   background: #fff !important;
   transform-style: preserve-3d;
+  overflow-x: hidden;
 }
 
 ul {
@@ -159,8 +161,9 @@ grow-2 {
   background-position: 0% 96%;
   background-size: cover; */
   z-index: -1;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  background-color: #000000;
   /* Add perspective to create a 3D effect */
   perspective: 1px;
   transform-style: preserve-3d;
@@ -183,7 +186,7 @@ grow-2 {
 }
 
 #particles-js.atf {
-  height: 120vh;
+  height: 100vh;
 }
 #particles-js.careers-hero {
   background-position: center;

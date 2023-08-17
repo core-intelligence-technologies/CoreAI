@@ -55,7 +55,7 @@ $(function () {
   const container = document.getElementById("particles-js");
   const myCircleAnimation = new CircleAnimation(container);
   myCircleAnimation.loadAssets().then(myCircleAnimation.init);
-
+  var prevWidth = window.innerWidth
 
   $(window).resize(function() {
     if ($(window).width() > 990) {
@@ -63,7 +63,11 @@ $(function () {
     } else {
       $(".main-header").hide()
     }
-    myCircleAnimation.onWindowResize()
+    // iOS somehow call onresize when scrolling on certain point, temporary fix
+    if (Math.abs(prevWidth - window.innerWidth) > 100) {
+      prevWidth = window.innerWidth
+      myCircleAnimation.onWindowResize()
+    }
    })
   // if (module && module.hot) {
   //   // module.hot.accept((a, b) => {
