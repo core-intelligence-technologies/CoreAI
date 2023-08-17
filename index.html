@@ -102,64 +102,80 @@
 			}
 			</script>
 
+			<!-- ThreeJS  -->
+			<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+			<!-- BE CAREFUL, ITS TREATED AS JSON STRING -->
+			<script type="importmap">
+				{
+					"imports": {
+						"three": "https://unpkg.com/three@0.155.0/build/three.module.js",
+						"three/addons/": "https://unpkg.com/three@0.155.0/examples/jsm/",
+						"troika-three-utils": "https://cdn.jsdelivr.net/npm/troika-three-utils@0.47.2/+esm",
+						"three-instanced-uniforms-mesh": "https://cdn.jsdelivr.net/npm/three-instanced-uniforms-mesh@0.47.2/+esm"
+					}
+				}
+			</script>
 	</head>
 
 	<body onscroll="parallax()">
 		<div id="particles-js" class="atf">
-			<div class="container top-content">
-				<div id="dust" data-friction-x="0.03" data-friction-y="0.05">
-					<li class="layer" id="specks" data-depth="0.1"></li>
-					<li class="layer" id="layer-1" data-depth="0.15">
-						<div class="dust-img" id="img-1"></div>
-					</li>
-					<!-- <li class="layer" id="layer-2" data-depth="0.25">
-						<div class="img" id="img-2"></div>
-					</li> -->
-					<li class="layer" id="layer-3" data-depth="0.45">
-						<div class="dust-img" id="img-3"></div>
-					</li>
-				</div>
-				<div class="top-header">
-					<div class="logo">
-						<a href="/"><img src="assets/images/logo.png" alt="Core Integellence" /></a>
+			<div class="absolute-wrapper">
+				<div class="container top-content">
+					<div id="dust" data-friction-x="0.03" data-friction-y="0.05">
+						<li class="layer" id="specks" data-depth="0.1"></li>
+						<li class="layer" id="layer-1" data-depth="0.15">
+							<div class="dust-img" id="img-1"></div>
+						</li>
+						<!-- Reduce total image for performance -->
+						<!-- <li class="layer" id="layer-2" data-depth="0.25">
+							<div class="img" id="img-2"></div>
+						</li> -->
+						<li class="layer" id="layer-3" data-depth="0.45">
+							<div class="dust-img" id="img-3"></div>
+						</li>
 					</div>
-					<div class="hamburger-btn">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-				<div class="main-header">
-					<nav>
-						<div>
-							<a href="/"><img src="assets/images/logo.png" width="240" height="auto" alt="Core Integellence" /></a>
+					<div class="top-header">
+						<div class="logo">
+							<a href="/"><img src="assets/images/logo.png" alt="Core Integellence" /></a>
 						</div>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="sevices.html">Our Services</a></li>
-							<li><a href="consulting.html">Past Projects</a></li>
-							<li><a href="people.html">Team</a></li>
-							<li><a href="careers.html">Careers</a></li>
-							<li><a href="/#contact">Contact us</a></li>
-						</ul>
-						<!-- <div class="line"></div> -->
-					</nav>
-				</div>
-				<div class="centered">
-						<!-- # -->
-						<!-- <h1 class="wow fadeInUp typed" data-wow-delay="0.5s"> -->
-					<h1 class="wow fadeInUp" data-wow-delay="0.7s">
-						Core Intelligence helps ASX300 companies adopt the latest in Artificial Intelligence
-						 solutions that solve real world problems.
-						<br />
-						<br>
-						Our team implements <strong>artificial intelligence for you.</strong>
-						<br>
-						<br />
-						We are an all Australian company. 
-						<br />
-					</h1>
-					<a href="consulting.html" class="find-more wow fadeInUp" data-wow-delay="0.9s">find out more</a>
+						<div class="hamburger-btn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+					<div class="main-header">
+						<nav>
+							<div>
+								<a href="/"><img src="assets/images/logo.png" width="240" height="auto" alt="Core Integellence" /></a>
+							</div>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="sevices.html">Our Services</a></li>
+								<li><a href="consulting.html">Past Projects</a></li>
+								<li><a href="people.html">Team</a></li>
+								<li><a href="careers.html">Careers</a></li>
+								<li><a href="/#contact">Contact us</a></li>
+							</ul>
+							<!-- <div class="line"></div> -->
+						</nav>
+					</div>
+					<div class="centered">
+							<!-- # -->
+							<!-- <h1 class="wow fadeInUp typed" data-wow-delay="0.5s"> -->
+						<h1 class="wow fadeInUp" data-wow-delay="0.7s">
+							Core Intelligence helps ASX300 companies adopt the latest in Artificial Intelligence
+							 solutions that solve real world problems.
+							<br />
+							<br>
+							Our team implements <strong>artificial intelligence for you.</strong>
+							<br>
+							<br />
+							We are an all Australian company. 
+							<br />
+							<a href="consulting.html" class="find-more wow fadeInUp" data-wow-delay="0.9s">find out more</a>
+						</h1>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -468,7 +484,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 		<script src="assets/js/wow.min.js"></script>
-
+		<script type="module" src="assets/js/BasicThreeDemo.js"></script>
+		<script type="module" src="assets/js/CircleAnimation.js"></script>
 		<script src="assets/js/app.js"></script>
 		<script src="assets/js/particles.js"></script>
 

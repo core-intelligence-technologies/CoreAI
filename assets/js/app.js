@@ -26,14 +26,6 @@ $(function () {
   $(".hamburger-btn").click(function () {
     $(".main-header").slideToggle();
   });
-  $(window).resize(function() {
-    if ($(window).width() > 990) {
-      console.log("goes here")
-      $(".main-header").show()
-    } else {
-      $(".main-header").hide()
-    }
-   })
   setTimeout(() => {
     const TYPED_STRINGS = [
       "We believe intelligence makes lives better.",
@@ -58,6 +50,30 @@ $(function () {
       // }
     });
   }, 1000)
+
+  /** Three.JS circle animation */
+  const container = document.getElementById("particles-js");
+  const myCircleAnimation = new CircleAnimation(container);
+  myCircleAnimation.loadAssets().then(myCircleAnimation.init);
+
+
+  $(window).resize(function() {
+    if ($(window).width() > 990) {
+      $(".main-header").show()
+    } else {
+      $(".main-header").hide()
+    }
+    myCircleAnimation.onWindowResize()
+   })
+  // if (module && module.hot) {
+  //   // module.hot.accept((a, b) => {
+  //   //   // For some reason having this function here makes dat gui work correctly
+  //   //   // when using hot module replacement
+  //   // });
+  //   module.hot.dispose(() => {
+  //     if (myCircleAnimation) myCircleAnimation.dispose();
+  //   });
+  // }
 
   // var prevScroll = 0
   // window.addEventListener('scroll', e => {
@@ -91,7 +107,6 @@ $(function () {
   function twinkle(id, duration) {
     var top = (Math.floor(Math.random() * 85) + 0) + '%';
     var left = (Math.floor(Math.random() * 85) + 0) + '%';
-    console.log("twinkle called", top, left)
 
     $('#speck' + id).remove();
     $('#specks').append("<div class='speck' id='speck" + id + "'></div>")
