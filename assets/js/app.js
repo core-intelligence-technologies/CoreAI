@@ -244,7 +244,6 @@ $(function () {
   }); */
 });
 
-
 var prevScroll = 0
 function parallax() {
   if (document.documentElement.scrollTop < 100 && Math.abs(document.documentElement.scrollTop - prevScroll) > 5) {

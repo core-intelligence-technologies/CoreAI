@@ -300,6 +300,11 @@ grow-2 {
   margin-bottom: 50px;
   font: 600 35px/50px Poppins;
 }
+.text-background {
+  background: black;
+  border: 1px;
+  border-radius: 4px;
+}
 #particles-js .centered p {
   color: #fff;
   font-weight: 300;
@@ -413,6 +418,20 @@ grow-2 {
 }
 .section.wwd {
   padding-bottom: 50px;
+}
+.section.newsletter {
+  background-color: rgb(218, 50, 108);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  items-align: center;
+  padding: 0 10px;
+}
+.section.newsletter h3 {
+  margin: 20px auto 0 auto;
+  color: white;
+  text-align: center;
 }
 .section .section-title {
   color: #ff5c66;
@@ -1933,8 +1952,19 @@ footer .footer-menu ul li a {
 @media (max-width: 991px) {
   .customers .container {
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
+  .customers .col-md-4 {
+    position: relative;
+    width: 140px;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
+  .customers .customer .customer-img {
+    padding: 16px;
+  }
   .project-box-item .box-img {
     padding: 25px;
   }
