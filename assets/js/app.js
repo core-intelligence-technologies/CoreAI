@@ -255,10 +255,17 @@ function parallax() {
 }
 
 async function downloadRSSFile() {
-  const xmlUrl = "/beehiv-coreintelligence.xml";
+  // const xmlUrl = "/beehiv-coreintelligence.xml";
+  const xmlUrl = "https://app.painta.io/rss-core/xml";
   // const xmlUrl = "https://rss.beehiiv.com/feeds/kfCZgEpgyw.xml";
-  const response = await fetch(xmlUrl);
-  const xmlString = await response.text();
+  let xmlString
+  try {
+    const response = await fetch(xmlUrl);
+    xmlString = await response.text();
+  } catch(err) {
+    const response = await fetch("/beehiv-coreintelligence.xml");
+    xmlString = await response.text();
+  }
   return xmlString
 }
 
@@ -328,7 +335,6 @@ async function parseRSSXML() {
         // encodedContent: itemEncodedContent,
       });
     })
-    // var Sku  = $xml.find("Sku");		
   
     const rss = document.getElementById('rss-newsletter')
     items.forEach((item) => {
