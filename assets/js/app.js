@@ -123,6 +123,7 @@ $(function () {
     })
   }
 
+  parseRSSXML()
   // setInterval(() => {
   //   $('.dust-img').css({
   //     'top': '-85px',
@@ -251,4 +252,107 @@ function parallax() {
     $('#footer-info').css('transform', `translateY(${direction*10}px)`)
   }
     prevScroll = document.documentElement.scrollTop
+}
+
+async function downloadRSSFile() {
+  const xmlUrl = "/beehiv-coreintelligence.xml";
+  // const xmlUrl = "https://rss.beehiiv.com/feeds/kfCZgEpgyw.xml";
+  const response = await fetch(xmlUrl);
+  const xmlString = await response.text();
+  return xmlString
+}
+
+function getXMLString() {
+  
+
+}
+
+async function parseRSSXML() {
+  // Parse XML using DOMParser
+  const parser = new DOMParser();
+  const xmlString = await downloadRSSFile();
+  
+  const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+  // Extract information from XML
+  const title = xmlDoc.querySelector("channel > title").textContent;
+  const description = xmlDoc.querySelector("channel > description").textContent;
+  const link = xmlDoc.querySelector("channel > link").textContent;
+  const lastBuildDate = xmlDoc.querySelector("channel > lastBuildDate").textContent;
+
+  // Populate items array
+  // const items = Array.from(xmlDoc.querySelectorAll("item")).map((item) => {
+  //   const itemTitle = item.querySelector("title").textContent;
+  //   const itemDescription = item.querySelector("description").textContent;
+  //   const itemLink = item.querySelector("link").textContent;
+  //   const itemPubDate = item.querySelector("pubDate").textContent;
+  //   // const itemCreator = item.querySelector("dc\\:creator").textContent;
+  //   const itemEncodedContent = item.querySelector("content\\:encoded");
+    
+  //   console.log('item', item.querySelector("content\\:encoded"))
+  //   return {
+  //     title: itemTitle,
+  //     description: itemDescription,
+  //     link: itemLink,
+  //     pubDate: itemPubDate,
+  //     creator: 'itemCreator',
+  //     // creator: itemCreator,
+  //     // encodedContent: itemEncodedContent,
+  //   };
+  // });
+
+  let items = []
+
+  $( document ).ready(function() {	   
+    const xmlDoc = $.parseXML(xmlString);
+    const $xml = $(xmlDoc);
+    const itemCount = $xml.find("item");
+    itemCount.map(ic => {
+      const $item = $(itemCount[ic]);
+      const itemTitle = $item.find('title')[0].innerHTML;
+      const itemDescription = $item.find('description')[0].innerHTML;
+      const itemLink = $item.find('link')[0].innerHTML;
+      const itemPubDate = $item.find('pubDate')[0].innerHTML;
+      const itemCreator = $item.find('dc\\:creator')[0];
+      const itemEncodedContent = $item.find('content\\:encoded')[0].textContent;
+      const itemEncodedContentHtml = $.parseHTML(itemEncodedContent);
+      const imageSrc = $(itemEncodedContentHtml).find('.image img').attr('src');
+      
+      items.push({
+        title: itemTitle,
+        description: itemDescription,
+        link: itemLink,
+        pubDate: itemPubDate,
+        creator: 'itemCreator',
+        creator: itemCreator,
+        imageSrc: imageSrc
+        // encodedContent: itemEncodedContent,
+      });
+    })
+    // var Sku  = $xml.find("Sku");		
+  
+    const rss = document.getElementById('rss-newsletter')
+    items.forEach((item) => {
+      const listItem = document.createElement("a");
+      listItem.classList.add("rss-item");    
+      listItem.setAttribute('href', item.link)    
+      listItem.innerHTML = `
+        <div class="image" alt="${item.title}" style="background-image: url(${item.imageSrc})"></div>
+        <h4>${item.title}</h4>
+        <p>${item.description}</p>
+        <a href="${item.link}">Read More</a>
+        <span>${new Date(item.pubDate).toLocaleString()}</span>
+      `;
+      rss.appendChild(listItem);
+    });
+  });
+  
+
+  // Use the extracted information as needed
+  console.log(title);
+  console.log(description);
+  console.log(link);
+  console.log(lastBuildDate);
+  console.log(items);
+  
+
 }

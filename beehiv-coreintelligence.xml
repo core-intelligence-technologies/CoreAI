@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Context Window</title>
+    <description></description>
+    
+    <link>https://thecontextwindow.beehiiv.com/</link>
+    <atom:link href="https://rss.beehiiv.com/feeds/kfCZgEpgyw.xml" rel="self"/>
+    
+    <lastBuildDate>Wed, 23 Aug 2023 12:40:02 +0000</lastBuildDate>
+    <pubDate>Wed, 23 Aug 2023 11:55:34 +0000</pubDate>
+    <atom:published>2023-08-23T11:55:34Z</atom:published>
+    <atom:updated>2023-08-23T12:40:02Z</atom:updated>
+    
+    <category>News</category>
+    <category>Artificial Intelligence</category>
+    <copyright>Copyright 2023, The Context Window</copyright>
+    
+    <image>
+      <url>https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/088a9ce6-fe1b-4914-a1dc-2a1d92e1ee3b/de05948a-b13d-4370-a49e-2937cc72df9b_400x400.jpeg</url>
+      <title>The Context Window</title>
+      <link>https://thecontextwindow.beehiiv.com/</link>
+    </image>
+    
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <generator>beehiiv</generator>
+    <language>en-us</language>
+    <webMaster>support@beehiiv.com (Beehiiv Support)</webMaster>
+    <item>
+      <title>The GPT Quantum Realm</title>
+      <description>The Context Window</description>
+        <enclosure url="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c99fa80a-bb76-48e0-b28f-ebc060a710a1/1691630845602.jpeg" length="49503" type="image/jpeg"/>
+      <link>https://thecontextwindow.beehiiv.com/p/gpt-quantum-realm</link>
+      <guid isPermaLink="true">https://thecontextwindow.beehiiv.com/p/gpt-quantum-realm</guid>
+      <pubDate>Tue, 08 Aug 2023 02:00:00 +0000</pubDate>
+      <atom:published>2023-08-08T02:00:00Z</atom:published>
+        <dc:creator>Paul Conyngham</dc:creator>
+      <content:encoded><![CDATA[
+        <div class='beehiiv'><div class='beehiiv__body'><p class="paragraph" style="text-align:left;"><i>If you’d like to explore how AI can enhance your business, reply to this email or contact us at </i><span style="text-decoration:underline;"><a class="link" href="https://contact@coreintelligence.com.au/?utm_source=thecontextwindow.beehiiv.com&amp;utm_medium=newsletter&amp;utm_campaign=gpt-behaviour-drift" target="_blank" rel="noopener noreferrer nofollow"><i>contact@coreintelligence.com.au</i></a></span><i> </i></p><hr class="content_break"><p class="paragraph" style="text-align:left;">The OpenAI API is expensive. But did you know it is possible to get, a ChatGPT level AI model for free on your OWN computer?</p><p class="paragraph" style="text-align:left;">Quantisation is a process that allows a very big language model (like GPT3.5) to be shrunk to fit on consumer grade hardware. This means that you can run the model for free on your very own computer.</p><p class="paragraph" style="text-align:left;">The LLM quantisation technique means that the GPT technology is soon to be ubiquitous &amp; (almost) free. Imagine a world when you can be <b>offline</b> and <b>have an LLM on your phone!</b></p><p class="paragraph" style="text-align:left;">If you are looking to get started with Quantisation here are 3 projects, with pros &amp; cons, try it out yourself:</p><p class="paragraph" style="text-align:left;"><span style=""><b>Technique:</b></span> <a class="link" href="https://github.com/ggerganov/ggml?utm_source=thecontextwindow.beehiiv.com&utm_medium=newsletter&utm_campaign=the-gpt-quantum-realm" target="_blank" rel="noopener noreferrer nofollow">GGML</a></p><p class="paragraph" style="text-align:left;"><span style=""><b>Pros</b></span>: Use GGML if you cannot fit the model entirely on VRAM</p><p class="paragraph" style="text-align:left;"><span style=""><b>Cons</b></span>: Slow</p><p class="paragraph" style="text-align:left;"><span style=""><b>Technique</b></span>: <a class="link" href="https://github.com/TimDettmers/bitsandbytes?utm_source=thecontextwindow.beehiiv.com&utm_medium=newsletter&utm_campaign=the-gpt-quantum-realm" target="_blank" rel="noopener noreferrer nofollow">Bitsandbytes</a></p><p class="paragraph" style="text-align:left;"><span style=""><b>Pros</b></span>: Newest Framework, Ease of use</p><p class="paragraph" style="text-align:left;"><span style=""><b>Cons</b></span>: Slowest</p><p class="paragraph" style="text-align:left;"><span style=""><b>Technique</b></span>: <a class="link" href="https://github.com/IST-DASLab/gptq?utm_source=thecontextwindow.beehiiv.com&utm_medium=newsletter&utm_campaign=the-gpt-quantum-realm" target="_blank" rel="noopener noreferrer nofollow">GPTQ</a></p><p class="paragraph" style="text-align:left;"><span style=""><b>Pros</b></span>: Fast, If you can fit the model entirely on the GPU using VRAM, GPTQ is faster</p><p class="paragraph" style="text-align:left;"><span style=""><b>Cons</b></span>: ?</p><div class="image"><img alt="" class="image__image" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c99fa80a-bb76-48e0-b28f-ebc060a710a1/1691630845602.jpeg"/></div><p class="paragraph" style="text-align:left;"></p></div><div class='beehiiv__footer'><br class='beehiiv__footer__break'><hr class='beehiiv__footer__line'><a target="_blank" class="beehiiv__footer_link" style="text-align: center;" href="https://www.beehiiv.com/?utm_campaign=0fec9bd3-581c-4d99-a57a-1007db0b0e5b&amp;utm_medium=post_rss&amp;utm_source=the_context_window">Powered by beehiiv</a></div></div>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>GPT Behaviour drift</title>
+      <description>The Context Window</description>
+        <enclosure url="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d9cb6659-d264-4e3f-9803-b915d5e83ea2/1690419622433.jpeg" length="75299" type="image/jpeg"/>
+      <link>https://thecontextwindow.beehiiv.com/p/gpt-behaviour-drift</link>
+      <guid isPermaLink="true">https://thecontextwindow.beehiiv.com/p/gpt-behaviour-drift</guid>
+      <pubDate>Thu, 03 Aug 2023 02:00:00 +0000</pubDate>
+      <atom:published>2023-08-03T02:00:00Z</atom:published>
+        <dc:creator>Paul Conyngham</dc:creator>
+      <content:encoded><![CDATA[
+        <div class='beehiiv'><div class='beehiiv__body'><p class="paragraph" style="text-align:left;"><b>The Context Window: on GPT Behaviour drift</b></p><p class="paragraph" style="text-align:left;"><i>If you’d like to explore how AI can enhance your business, reply to this email or contact us at </i><i><a class="link" href="https://contact@coreintelligence.com.au?utm_source=thecontextwindow.beehiiv.com&utm_medium=newsletter&utm_campaign=gpt-behaviour-drift" target="_blank" rel="noopener noreferrer nofollow">contact@coreintelligence.com.au</a></i></p><hr class="content_break"><p class="paragraph" style="text-align:left;">Did you know that <span style=""><b>ChatGPT/ OpenAI’s</b></span> models experience <span style=""><b>“behaviour drift</b></span>”? If you&#39;re not aware of this potential problem, it could become a real pain to your project.</p><p class="paragraph" style="text-align:left;">Why does drift occur? OpenAI&#39;s models are black boxes and OpenAI is constantly changing how these models work under the hood. The behaviour drift occurs when OpenAI makes updates or architectural changes to their base models without explicitly telling us what exactly the changes are.</p><p class="paragraph" style="text-align:left;">This means that if you build an LLM application today and use OpenAI APIs as an endpoint, in a couple of months, it may not perform exactly the same as it did when you first ran it.</p><p class="paragraph" style="text-align:left;">You can combat model drift by finetuning your own open source base model such as Llama 2, checkpointing it and deploying the checkpointed model to the cloud. That way you&#39;ll have total control over your models behaviour and could even have version control over the series of models you develop over time which is essential for proper testing and behaviour tracking.</p><p class="paragraph" style="text-align:left;">Evidence for shifting performance of the GPT is provided in this <a class="link" href="https://www.aisnakeoil.com/p/is-gpt-4-getting-worse-over-time?utm_source=thecontextwindow.beehiiv.com&utm_medium=newsletter&utm_campaign=gpt-behaviour-drift" target="_blank" rel="noopener noreferrer nofollow">linked article</a>. Specifically, the end of the article contains information on behaviour drift</p><div class="image"><img alt="" class="image__image" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d9cb6659-d264-4e3f-9803-b915d5e83ea2/1690419622433.jpeg"/></div><p class="paragraph" style="text-align:left;"><br><br></p></div><div class='beehiiv__footer'><br class='beehiiv__footer__break'><hr class='beehiiv__footer__line'><a target="_blank" class="beehiiv__footer_link" style="text-align: center;" href="https://www.beehiiv.com/?utm_campaign=f95004ae-5753-426f-aea0-2da5133c9d2e&amp;utm_medium=post_rss&amp;utm_source=the_context_window">Powered by beehiiv</a></div></div>
+      ]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>
