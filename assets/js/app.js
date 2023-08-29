@@ -313,6 +313,7 @@ async function parseRSSXML() {
     const xmlDoc = $.parseXML(xmlString);
     const $xml = $(xmlDoc);
     const itemCount = $xml.find("item");
+
     itemCount.map(ic => {
       const $item = $(itemCount[ic]);
       const itemTitle = $item.find('title')[0].innerHTML;
@@ -335,9 +336,11 @@ async function parseRSSXML() {
         // encodedContent: itemEncodedContent,
       });
     })
+
+    items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
   
     const rss = document.getElementById('rss-newsletter')
-    items.forEach((item) => {
+    items.slice(0,3).forEach((item) => {
       const listItem = document.createElement("a");
       listItem.classList.add("rss-item");    
       listItem.setAttribute('href', item.link)    
@@ -351,14 +354,6 @@ async function parseRSSXML() {
       rss.appendChild(listItem);
     });
   });
-  
-
-  // Use the extracted information as needed
-  console.log(title);
-  console.log(description);
-  console.log(link);
-  console.log(lastBuildDate);
-  console.log(items);
   
 
 }
